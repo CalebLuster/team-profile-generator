@@ -14,6 +14,21 @@ const invokeManager = () => {
       name: "name",
       message: "What is your first name?",
     },
+      {
+      tpye: "input",
+      name: "email",
+      message: "What is your email?",
+    },
+      {
+      tpye: "input",
+      name: "ID",
+      message: "What is your employee ID?",
+    },
+    {
+        tpye: "input",
+        name: "officeNumber",
+        message: "What is your officeNumber?",
+      },
   ]);
 };
 const invokeEngineer = () => {
@@ -23,6 +38,20 @@ const invokeEngineer = () => {
       name: "name",
       message: "What is your first name?",
     },
+      {
+      tpye: "input",
+      name: "email",
+      message: "What is your email?",
+    },
+      {
+      tpye: "input",
+      name: "ID",
+      message: "What is your employee ID?",
+    },  {
+        tpye: "input",
+        name: "github",
+        message: "What is your github username?",
+      },
   ]);
 };
 const invokeIntern = () => {
@@ -32,6 +61,21 @@ const invokeIntern = () => {
       name: "name",
       message: "What is your first name?",
     },
+      {
+      tpye: "input",
+      name: "email",
+      message: "What is your email?",
+    },
+      {
+      tpye: "input",
+      name: "ID",
+      message: "What is your employee ID?",
+    },
+    {
+        tpye: "input",
+        name: "school",
+        message: "What is the name of your school?",
+      },
   ]);
 };
 const pickOne = () => {
@@ -49,4 +93,3 @@ const pickOne = () => {
   ]);
 };
 
-pickOne();

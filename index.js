@@ -37,8 +37,9 @@ const invokeIntern = () => {
 const pickOne = () => {
   return inquirer.prompt([
     {
-      type: "What you like to do next? (Please choose one)",
+      type: "list",
       name: "configTeam",
+      message: "What you like to do next? (Please choose one)",
       choices: [
         "Add a new Engineer",
         "Add a new Intern",

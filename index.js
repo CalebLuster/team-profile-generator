@@ -6,3 +6,18 @@ const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 const team = [];
 
+const invokeManager = () => {
+return inquirer.prompt([
+    {}
+])
+}
+const invokeEngineer = () => {
+    return inquirer.prompt([
+        {}
+    ])
+}
+const invokeIntern = () => {
+    return inquirer.prompt([
+        {}
+    ])
+}

@@ -245,10 +245,10 @@ const completeTeam = () => {
   Team finished! Thats one nice team!
   ///////////////////////////////////
   `);
-  if (!fs.existsSync(RESULTS_DIR)) {
-    fs.mkdirSync(RESULTS_DIR);
+  if (!fs.existsSync(OUTPUT_DIR)) {
+    fs.mkdirSync(OUTPUT_DIR);
   }
-  fs.writeFileSync(resultsPath, source(team), "utf-8");
+  fs.writeFileSync(outputPath, source(team), "utf-8");
 };
 
 invokeManager();

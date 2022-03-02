@@ -212,16 +212,43 @@ const invokeIntern = () => {
     });
 };
 const pickOne = () => {
-  return inquirer.prompt([
-    {
-      type: "list",
-      name: "configTeam",
-      message: "What you like to do next? (Please choose one)",
-      choices: [
-        "Add a new Engineer",
-        "Add a new Intern",
-        "Finish building team",
-      ],
-    },
-  ]);
+  return inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "configTeam",
+        message: "What you like to do next? (Please choose one)",
+        choices: [
+          "Add a new Engineer",
+          "Add a new Intern",
+          "Finish building team",
+        ],
+      },
+    ])
+    .then((onePicked) => {
+      switch (onePicked.configTeam) {
+        case "Add a new Engineer":
+          invokeEngineer();
+          break;
+        case "Add a new Intern":
+          invokeIntern();
+          break;
+        default:
+          completeTeam();
+      }
+    });
 };
+
+const completeTeam = () => {
+  console.log(`
+  ///////////////////////////////////
+  Team finished! Thats one nice team!
+  ///////////////////////////////////
+  `);
+  if (!fs.existsSync(RESULTS_DIR)) {
+    fs.mkdirSync(RESULTS_DIR);
+  }
+  fs.writeFileSync(resultsPath, source(team), "utf-8");
+};
+
+invokeManager();

@@ -56,22 +56,22 @@ const teamResults = (employees) => {
     html.push(internCode);
   };
 
-  for (let i = 0; i < teamResults.length; i++) {
-    if (teamResults[i].getRole() === "Manager") {
-      mangerResults(teamResults[i]);
+  for (let i = 0; i < employees.length; i++) {
+    if (employees[i].getRole() === "Manager") {
+      managerResults(employees[i]);
     }
-    if (teamResults[i].getRole() === "Engineer") {
-      engineerResults(teamResults[i]);
+    if (employees[i].getRole() === "Engineer") {
+      engineerResults(employees[i]);
     }
-    if (teamResults[i].getRole() === "Intern") {
-      internResults(teamResults[i]);
+    if (employees[i].getRole() === "Intern") {
+      internResults(employees[i]);
     }
   }
 
   return html.join("");
 };
 
-module.exports = (teamResults) => {
+module.exports = (employees) => {
   return `
     <!DOCTYPE html>
         <html lang="en">

@@ -6,6 +6,9 @@ const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 const Choices = require("inquirer/lib/objects/choices");
 const team = [];
+const results_dir = path.resolve(__dirname, "results");
+const resultsPath = path.join(results_dir, "index.html");
+const source = require("./src/source");
 
 const invokeManager = () => {
   return inquirer
@@ -245,10 +248,10 @@ const completeTeam = () => {
   Team finished! Thats one nice team!
   ///////////////////////////////////
   `);
-  if (!fs.existsSync(OUTPUT_DIR)) {
-    fs.mkdirSync(OUTPUT_DIR);
+  if (!fs.existsSync(results_dir)) {
+    fs.mkdirSync(results_dir);
   }
-  fs.writeFileSync(outputPath, source(team), "utf-8");
+  fs.writeFileSync(resultsPath, source(team), "utf-8");
 };
 
 invokeManager();

@@ -1,6 +1,6 @@
 # Team Generator
 
-video demo link:
+video demo link: https://drive.google.com/file/d/1hdWO2Viiz_7fm_KRgw4xMVu_u0mkoN9X/view
 
 To run this application run the following commands; npm init, npm i inquirer, npm install jest.
 

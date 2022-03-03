@@ -6,15 +6,18 @@ const teamResults = (employees) => {
   const managerResults = (manager) => {
     console.log(manager);
     let managerCode = `
-    <div>
-        <div>
-            ${manager.name} <br/>
-            <i></i>Manager
+    <div class="card">
+        <div class="card-header">
+        ${manager.name} <br />
+        <i class="fas fa-mug-hot"></i>Manager
         </div>
-        <ul>
-            <li>Employee ID: ${manager.ID}</li>
-            <li>Employee Email: <span> <a href="mailto:${manager.email}">${manager.email}</a></span></li>
-            <li>Office Number: ${manager.officeNumber}</li>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            Employee Email:
+            <span> <a href="mailto:${manager.email}">${manager.email}</a></span>
+        </li>
+            <li class="list-group-item">Employee ID: ${manager.ID}</li>
+            <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
         </ul>
     </div>
      `;
@@ -23,15 +26,24 @@ const teamResults = (employees) => {
   const engineerResults = (engineer) => {
     console.log(engineer);
     let engineerCode = `
-    <div>
-        <div>
-            ${engineer.name} <br/>
-            <i></i>Engineer
+    <div class="card">
+        <div class="card-header">
+        ${engineer.name} <br />
+        <i class="fas fa-glasses"></i>Engineer
         </div>
-        <ul>
-            <li>Employee ID: ${engineer.ID}</li>
-            <li>Employee Email: <span> <a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
-            <li>GitHub Profile: <span> <a target="_blank" href="https://github.com/${engineer.github}">${engineer.github}</a></span>}</li>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            Employee Email:
+            <span> <a href="mailto:${engineer.email}">${engineer.email}</a></span>
+        </li>
+            <li class="list-group-item">Employee ID: ${engineer.ID}</li>
+            <li class="list-group-item">
+                GitHub Profile:
+                <span>
+                <a target="_blank" href="https://github.com/${engineer.github}"
+                    >${engineer.github}</a
+                ></span>
+            </li>
         </ul>
     </div>
     `;
@@ -41,15 +53,18 @@ const teamResults = (employees) => {
   const internResults = (intern) => {
     console.log(intern);
     let internCode = `
-    <div>
-        <div>
-            ${intern.name} <br/>
-            <i></i>Intern
+    <div class="card">
+        <div class="card-header">
+            ${intern.name} <br />
+            <i class="fas fa-user-graduate"></i>Intern
         </div>
-        <ul>
-            <li>Employee ID: ${intern.ID}</li>
-            <li>Employee Email: <span> <a href="mailto:${intern.email}">${intern.email}</a></span></li>
-            <li>School: ${intern.school}</li>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+        Employee Email:
+        <span> <a href="mailto:${intern.email}">${intern.email}</a></span>
+        </li>
+            <li class="list-group-item">Employee ID: ${intern.ID}</li>
+            <li class="list-group-item">School: ${intern.school}</li>
         </ul>
     </div>
     `;
@@ -79,6 +94,8 @@ module.exports = (employees) => {
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" href="../dist/style.css">
             <title>Document</title>
     </head>
     <body>

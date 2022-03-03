@@ -1,0 +1,19 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header {
+  justify-content: center;
+  display: flex;
+  background-color: aqua;
+}
+.card {
+  margin: 20px;
+  background-color: aquamarine;
+}
+.card-header {
+  font-size: larger;
+  font-weight: bold;
+}

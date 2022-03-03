@@ -70,9 +70,9 @@ const invokeManager = () => {
       console.log(results);
       const manager = new Manager(
         results.name,
-        results.email,
         results.ID,
-        results.school
+        results.email,
+        results.officeNumber
       );
       team.push(manager);
       pickOne();
@@ -138,8 +138,8 @@ const invokeEngineer = () => {
       console.log(results);
       const engineer = new Engineer(
         results.name,
-        results.email,
         results.ID,
+        results.email,
         results.github
       );
       team.push(engineer);
@@ -206,8 +206,8 @@ const invokeIntern = () => {
       console.log(results);
       const intern = new Intern(
         results.name,
-        results.email,
         results.ID,
+        results.email,
         results.school
       );
       team.push(intern);

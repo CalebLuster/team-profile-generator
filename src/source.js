@@ -1,8 +1,11 @@
+// This is the file for the source code where it takes the user input and puts it into an HTML file.
 const teamResults = (employees) => {
   console.log(employees);
 
   const html = [];
-
+  // ===================================== //
+  // This method is for the manager code.
+  // ===================================== //
   const managerResults = (manager) => {
     console.log(manager);
     let managerCode = `
@@ -23,6 +26,9 @@ const teamResults = (employees) => {
      `;
     html.push(managerCode);
   };
+  // ===================================== //
+  // this method is for the engineer code.
+  // ===================================== //
   const engineerResults = (engineer) => {
     console.log(engineer);
     let engineerCode = `
@@ -49,7 +55,9 @@ const teamResults = (employees) => {
     `;
     html.push(engineerCode);
   };
-
+  // ===================================== //
+  // this method is for the intern code.
+  // ===================================== //
   const internResults = (intern) => {
     console.log(intern);
     let internCode = `
@@ -70,7 +78,9 @@ const teamResults = (employees) => {
     `;
     html.push(internCode);
   };
-
+  // ===================================== //
+  // for if loop.
+  // ===================================== //
   for (let i = 0; i < employees.length; i++) {
     if (employees[i].getRole() === "Manager") {
       managerResults(employees[i]);
@@ -85,7 +95,9 @@ const teamResults = (employees) => {
 
   return html.join("");
 };
-
+// ===================================== //
+// exports it and puts all of the code uptop into the body of the file. This is where the links for CSS exsist.
+// ===================================== //
 module.exports = (employees) => {
   return `
     <!DOCTYPE html>
